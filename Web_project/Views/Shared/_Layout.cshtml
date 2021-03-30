@@ -9,21 +9,25 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand bg-dark justify-content-between">
+        <nav class="navbar navbar-expand-lg bg-dark fixed-top" justify-content-between>
+
+            <a class="navbar-brand text-primary" style="font-size:large" href="#">Task-web</a>
+            <nav class="navbar navbar-dark bg-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDemo"
+                        aria-controls="navbarDemo" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </nav>
             
-            <p class="display-4"><mark class="bg-dark text-primary">Task-web</mark></p>
-                    
-                <form class="form-inline">
-                    <input type="text" class="form-control" style="margin:0 20px 0 0" placeholder="NickName" name="nickname" />
-                    <div class="input-group">
-                        
-                        <input type="text" class="form-control" placeholder="Message" aria-describedby="addon01" name="message" />
-                        <div class="input-group-append">
-                            <button type="submit" class="btn btn-outline-success">Ввод</button>
-                        </div>
+            <div class="collapse navbar-collapse" id="navbarDemo">
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="text" class="form-control" style="margin:0 20px 10px 0; width:200px" placeholder="NickName" name="nickname" />
+                    <div class="input-group-append">
+                        <input type="text" class="form-control" placeholder="Message" style="width:400px" aria-describedby="addon01" name="message" />
+                        <button type="submit" style="margin-bottom:10px" class="btn btn-outline-success">Ввод</button>
                     </div>
                 </form>
-           
+            </div>
         </nav>
     </header>
     <div class="container">
