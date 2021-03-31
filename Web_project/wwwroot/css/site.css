@@ -7,6 +7,15 @@ a.navbar-brand {
   word-break: break-all;
 }
 
+.brand_span {
+  font-size: 45px;
+  font-family: 'Comic Sans', sans-serif;
+}
+
+#navbarDemo {
+  float: right;
+}
+
 /* Provide sufficient contrast against white background */
 a {
   color: #0366d6;
