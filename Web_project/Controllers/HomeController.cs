@@ -15,5 +15,13 @@ namespace Web_project.Controllers
             return View();
         }
 
+        [HttpPost]
+        public IActionResult Partial(string name, string msg)
+        {
+            var usermsg = 0;
+            
+            return PartialView(usermsg);
+        }
+
     }
 }

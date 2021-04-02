@@ -7,44 +7,58 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-dark fixed-top" justify-content-between>
-
-            <a class="navbar-brand text-primary" href="#">
+        <nav class="navbar navbar-expand-xl bg-dark fixed-top">
+            <a class="navbar-brand text-primary display-4" href="#">
                 <span class="brand_span">Task-web</span>
             </a>
+
             <nav class="navbar navbar-dark bg-dark">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarDemo"
                         aria-controls="navbarDemo" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </nav>
-            
-            <div class="collapse navbar-collapse" id="navbarDemo">
-                <form class="form-inline my-2 my-lg-0">
-                    <input type="text" class="form-control" style="margin:0 20px 10px 0; width:200px" placeholder="NickName" name="nickname" />
-                    <div class="input-group-append">
-                        <input type="text" class="form-control" placeholder="Message" style="width:400px" aria-describedby="addon01" name="message" />
-                        <button type="submit" style="margin-bottom:10px" class="btn btn-outline-success">Ввод</button>
+
+            <div class="collapse navbar-collapse navbar-expand-md" id="navbarDemo">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" style="font-size:x-large" href="#">Home</a>
+                    </li>
+                </ul>
+                <form class="form-inline">
+                    <div class="input-group-append" style="margin-right:10px; margin-bottom:10px">
+                        <input type="text" class="form-control" width:200px" placeholder="NickName" name="nickname" />
+                        <button type="submit" class="btn btn-outline-success flex-shrink-0">Войти в чат</button>
                     </div>
-                </form>
+                    <div class="input-group-append" style="margin-right: 10px; margin-bottom: 10px">
+                        <input type="text" class="form-control" placeholder="Message" style="width:400px" aria-describedby="addon01" name="message" />
+                        <button type="submit" class="btn btn-outline-success">Ввод</button>
+                    </div>
+</form>
             </div>
         </nav>
     </header>
-    <div class="container">
-        <main role="main" class="pb-lg-4">
-            @RenderBody()
-        </main>
-    </div>
 
-    <footer class="border-top footer text-muted">
+    <main role="main">
         <div class="container">
-            &copy; 2021 - Task-web
+            <p class="text-center text-primary display-4"><u><b>MessageWeb</b></u></p>
+            @RenderBody()
         </div>
+    </main>
+
+    <footer class="footer">
+            <span>&copy; 2021 - Task-web.</span>
     </footer>
+
+    @*<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>*@
+
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>
